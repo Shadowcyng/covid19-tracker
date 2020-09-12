@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #f5f6fa;
+}
+.app{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.app__left{
+  flex: 0.9;
+}
+.app__right{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.app__graphTitle{
+  margin: 20px 0;
+}
+.app__graph{
+  flex-grow: 1;
+}
+.app__right .MuiCardContent-root{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.app__header{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.app__header > h1{
+  color: #fc3c3c;
+  font-size: 2rem;
+}
+.app__dropdown{
+  background-color: white;
+}
+.app__stats{
+  display: flex;
+  justify-content: space-between;
+}
+.table-card{
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 990px){
+  .app{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 100%;
+  }
+  .app__graphTitle{
+    margin: 20px 0;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
